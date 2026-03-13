@@ -1,0 +1,3 @@
+Diamonds;Rihanna;3.46
+Company;Justin Bieber;3.49
+High School in Jakarta;NIKI;3.41
