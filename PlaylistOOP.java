@@ -250,7 +250,7 @@ public class PlaylistOOP {
         Admin admin = new Admin("Admin");
         Member member = new Member("Member");
 
-        int pilihan;
+        int pilihan = 0;
 
         do{
 
@@ -262,8 +262,14 @@ public class PlaylistOOP {
             System.out.println("5. Keluar");
 
             System.out.print("Masukkan Pilihan: ");
-            pilihan = input.nextInt();
-            input.nextLine();
+            try {
+                pilihan = input.nextInt();
+                input.nextLine(); // menghapus newline setelah nextInt
+            } catch (InputMismatchException e) {
+                System.out.println("Input harus berupa angka 1-5 ! Silakan coba lagi.");
+                input.nextLine(); // menghapus input yang salah
+                continue; // kembali ke awal loop 
+            }
 
             switch(pilihan){
 
